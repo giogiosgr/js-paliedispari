@@ -1,9 +1,9 @@
 "use strict";
 
 //inizializzazione variabile con la scelta di pari o dispari
-const choice = prompt("scegli 'pari' o 'dispari'")
+const choice = prompt("scegli 'pari' o 'dispari'");
 //inizializzazione variabile per la scelta del numero
-const digit = parseInt(prompt("scegli un numero da 1 a 5"))
+const digit = parseInt(prompt("scegli un numero da 1 a 5"));
 //condizione di controllo che tutti gli input siano accettabili
 if (isNaN(digit) || digit < 1 || digit > 5 || (choice.toLowerCase() != "pari" && choice.toLowerCase() != "dispari")) {
     alert("uno o più input non sono corretti");
@@ -25,3 +25,5 @@ if ((isEven(sum) && choice === "pari") || (!isEven(sum) && choice === "dispari")
 } else {
     alert(`la somma risultante è ${sum}, quindi ha vinto il computer`);
 }
+//reload della pagina
+document.location.reload();
