@@ -1,7 +1,7 @@
 "use strict";
 
 //definizione variabile per una qualsiasi frase input dell'utente
-let phrase = prompt("Inserisci una frase");
+const phrase = prompt("Inserisci una frase");
 
 /* Definizione funzione con logica: trasformiamo la frase in un'altra frase contenente soltanto le lettere, 
 non altri caratteri. Confrontiamo questa nuova frase con il suo inverso. Se abbiamo uguaglianza, 
@@ -18,7 +18,7 @@ function isPalindrome(words) {
     //ciclo for per tutta la lunghezza dell'array di partenza
     for (let i = 0; i < words.length; i++) {
         //per ogni lettera della frase di partenza, preleviamo il suo corrispettivo valore decimale Ascii
-        let asciiValue = words[i].charCodeAt(0);
+        const asciiValue = words[i].charCodeAt(0);
         //se il valore Ascii è compreso nel range delle lettere in lower case, allora lo pusheremo nel nuovo array
         if (asciiValue > 96 && asciiValue < 123) {
             filteredWords.push(words[i]);
