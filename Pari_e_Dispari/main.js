@@ -25,5 +25,7 @@ if ((isEven(sum) && choice === "pari") || (!isEven(sum) && choice === "dispari")
 } else {
     alert(`la somma risultante è ${sum}, quindi ha vinto il computer`);
 }
-//reload della pagina
-document.location.reload();
+//reload della pagina se l'utente dà conferma
+if (confirm("vuoi riprovare?")) {
+    document.location.reload();
+}
