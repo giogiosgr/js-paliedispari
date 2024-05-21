@@ -25,11 +25,13 @@ function isPalindrome(words) {
     //definizione nuova variabile che conterrà la versione stringa dell'array filtrato E invertito
     const reversedWords = filteredWords.join("");
     //se la frase filtrata e il suo inverso corrispondono, avremo un palindromo
-    if (words === reversedWords) {
+    //inoltre escludiamo il caso limite di parola con meno di due caratteri
+    if (words === reversedWords && words.length > 1) {
         return true;
     }
     return false;
 }
+
 //condizione in cui si richiama la funzione, con la frase di input come parametro, che restituirà true oppure false
 if (isPalindrome(phrase)) {
     alert("La frase è un palindromo!");
